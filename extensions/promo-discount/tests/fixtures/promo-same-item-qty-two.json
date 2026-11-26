@@ -16,7 +16,7 @@
           }
         ]
       },
-      "discount": { "discountClasses": ["PRODUCT"] }
+      "discount": { "discountClasses": ["PRODUCT"], "metafield": null }
     },
     "output": {
       "operations": [
