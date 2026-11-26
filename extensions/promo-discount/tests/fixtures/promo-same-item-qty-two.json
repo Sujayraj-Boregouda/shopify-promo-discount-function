@@ -7,17 +7,16 @@
         "lines": [
           {
             "id": "gid://shopify/CartLine/0",
-            "cost": {
-              "subtotalAmount": {
-                "amount": "100.0"
-              }
+            "quantity": 2,
+            "cost": { "amountPerQuantity": { "amount": "885.95" } },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": { "hasAnyTag": true }
             }
           }
         ]
       },
-      "discount": {
-        "discountClasses": ["PRODUCT"]
-      }
+      "discount": { "discountClasses": ["PRODUCT"] }
     },
     "output": {
       "operations": [
@@ -25,19 +24,11 @@
           "productDiscountsAdd": {
             "candidates": [
               {
-                "message": "20% OFF PRODUCT",
+                "message": "Buy 2 promo items: 15% off the cheaper one",
                 "targets": [
-                  {
-                    "cartLine": {
-                      "id": "gid://shopify/CartLine/0"
-                    }
-                  }
+                  { "cartLine": { "id": "gid://shopify/CartLine/0", "quantity": 1 } }
                 ],
-                "value": {
-                  "percentage": {
-                    "value": 20.0
-                  }
-                }
+                "value": { "percentage": { "value": 15 } }
               }
             ],
             "selectionStrategy": "FIRST"
